@@ -15,6 +15,7 @@ namespace AADB2C.WebAPI.Models
 
         // Optional claims
         public string[] emails { get; set; }
+        public string toc { get; set; }
         public B2CResponseModel(string message, HttpStatusCode status)
         {
             this.userMessage = message;

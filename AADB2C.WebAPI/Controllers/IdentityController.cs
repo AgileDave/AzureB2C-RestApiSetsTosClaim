@@ -16,7 +16,6 @@ namespace AADB2C.WebAPI.Controllers
     [Route("api/[controller]/[action]")]
     public class IdentityController : Controller
     {
-
         [HttpPost(Name = "checkEmails")]
         public async Task<ActionResult> checkEmails()
         {
@@ -61,12 +60,12 @@ namespace AADB2C.WebAPI.Controllers
             arrayOfEmails[1] = "fake@gmail.com";
             arrayOfEmails[2] = "john@fabrikam.com";
 
-
             try
             {
                 return StatusCode((int)HttpStatusCode.OK, new B2CResponseModel(string.Empty, HttpStatusCode.OK)
                 {
-                    emails = arrayOfEmails
+                    emails = arrayOfEmails,
+                    toc = $"Terms of Conditions for {inputClaims.userLanguage} language"
                 });
             }
             catch (Exception ex)
