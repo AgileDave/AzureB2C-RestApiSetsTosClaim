@@ -10,7 +10,7 @@ namespace AADB2C.WebAPI.Models
     {
         // Demo: User's object id in Azure AD B2C
         public string identifier { get; set; }
-        public string userLanguage { get; set; }
+        public string lang { get; set; }
         public override string ToString()
         {
             return JsonConvert.SerializeObject(this);

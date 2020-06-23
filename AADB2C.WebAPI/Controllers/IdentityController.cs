@@ -65,7 +65,7 @@ namespace AADB2C.WebAPI.Controllers
                 return StatusCode((int)HttpStatusCode.OK, new B2CResponseModel(string.Empty, HttpStatusCode.OK)
                 {
                     emails = arrayOfEmails,
-                    toc = $"Terms of Conditions for {inputClaims.userLanguage} language"
+                    toc = $"Terms of Conditions for {inputClaims.lang} language"
                 });
             }
             catch (Exception ex)
